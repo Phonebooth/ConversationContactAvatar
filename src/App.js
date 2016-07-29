@@ -5,7 +5,6 @@ import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
-import logo from './logo.svg';
 import './App.css';
 
 import ConversationContactAvatar from './ConversationContactAvatar'
@@ -16,18 +15,15 @@ const paperStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    backgroundColor: '#4B5854'
 }
 
 class App extends Component {
   render() {
     return (
         <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-            <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h2>Welcome to React</h2>
-                </div>
+            <div>
                 <Paper style={paperStyle} zDepth={2}>
                     <ConversationContactAvatar size={32} isCalling={true} />
                 </Paper>

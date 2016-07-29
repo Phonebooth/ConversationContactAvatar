@@ -15,17 +15,13 @@ export default class ConversationContactAvatar extends Component {
             size
         } = this.props
 
-        if (isCalling) {
-
-        }
-
         return (
             <Avatar
+                className={isCalling ? 'calling-active' : null}
                 size={size}
                 color={blue300}
                 backgroundColor={indigo900}
-                icon={<Person />}
-                />
+                icon={<Person />} />
         )
     }
 }
